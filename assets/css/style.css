@@ -49,12 +49,15 @@ pinkish selected button and view high scores text color - bd60e7
 .quiz-container {
     padding: 0 20%;
 }
+.question {
+    font-size:4em;
+}
 .answer-btn {
     display:block;
     margin: 10px 0;
     text-align: left;
     padding: 10px;
-    width:35%;
+    width:400px;
     color:white;
     background-color:#351c75;
     font-size:2.2em;
@@ -71,13 +74,18 @@ pinkish selected button and view high scores text color - bd60e7
     padding-top: 10px;
 }
 .score {
-    margin: 0 20%;
+    margin: 0 10%;
+}
+.score-title {
+    font-size:4em;
+}
+.score-sub {
+    font-size:2.5em;
 }
 form{
     display:flex;
 }
 input {
-   
     width: 400px;
     margin: 0 10px;
 }
@@ -92,9 +100,15 @@ input {
   .initials-btn:hover {
       background-color:#bd60e7;
   }
-  .high-scores {
+  .high-scores-container {
       padding: 0 30%;
   }
+  .high-scores-title {
+    font-size:4em;
+}
+.high-score {
+    font-size:2.5em;
+}
   .scores-ol {
       background-color:#d9d3e9;
   }
@@ -109,5 +123,178 @@ input {
   .scores-btn:hover {
       background-color:#bd60e7;
   }
+  @media screen and (max-width: 1050px) {
+      .question {
+          font-size: 3em;
+      }
+      .answer-btn {
+        width: 100%;
+        font-size: 2em;
+    }
+    .score {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .score-title {
+        font-size:2.5em;
+    }
+    .score-sub {
+        font-size:2em;
+    }
+    input {
+        width: 200px;
+        margin: 0 5px;
+    }
+    .initials-btn {
+        padding: 5px 10px;
+        font-size:1.5em;
+     }
+     .high-scores-container {
+        padding: 0 20%;
+    }
+     .high-scores-title {
+        font-size:3em;
+    }
+    .high-score {
+        font-size:1.8em;
+    }
+    .scores-btn {
+        padding: 4px 8px;
+        font-size:1.8em;
+     }  
+  }
+  @media screen and (max-width: 660px) {
+    header a {
+        font-size: 1.5em;
+    }
+    header p {
+        font-size: 1.5em;
+    }
+    .title {
+      font-size:3em;
+  }
+  .subtitle {
+      font-size:2em;
+  }
+  .start-btn {
+      padding: 9px 20px;
+      font-size:2em;
+   }
+   .quiz-container {
+    padding: 0 10px;
+   }
+   .question {
+       font-size: 2.5em;
+   }
+   .high-scores-container {
+    padding: 0 15%;
+}
+ .high-scores-title {
+    font-size:2.5em;
+}
+.high-score {
+    font-size:1.4em;
+}
+.scores-btn {
+    padding: 2px 4px;
+    font-size:1.4em;
+ }
+}
+@media screen and (max-width: 540px) {
+    .score {
+        margin: 0 5px;
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+    }
+    .score-title {
+        font-size:2em;
+    }
+    .score-sub {
+        font-size:1.5em;
+    }
+    form {
+        display:flex;
+        flex-direction: column;
+    }
+    input {
+        width: 100%;
+        margin: 0 2.5px;
+    }
+    .initials-btn {
+        margin-top:3px;
+        padding: 2px 5px;
+        font-size:1.5em;
+     } 
+}
 
-  
+@media screen and (max-width: 500px) {
+    .title {
+        font-size:2.3em;
+    }
+    .subtitle {
+        font-size:1.7em;
+    }
+    .start-btn {
+        padding: 2px 8px;
+        font-size:1.5em;
+     }
+     
+    .answer-btn {
+        font-size: 1.25em;
+    }
+     
+}
+
+@media screen and (max-width: 386px) {
+    header {
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    header a {
+        
+        margin: 0;
+        padding: 0;
+    }
+    header p {
+        margin: 0;
+        padding-top: 10px;
+    }
+    .title {
+        font-size:1.8em;
+    }
+    .subtitle {
+        font-size:1.2em;
+    }
+    .start-btn {
+        padding: 2px 8px;
+        font-size:1.3em;
+     }
+     .question {
+        font-size: 2em;
+    }
+    .answer-btn {
+        font-size: 1em;
+    }
+    .score-title {
+        font-size:1.5em;
+    }
+    .score-sub {
+        font-size:1.1em;
+    }
+    .high-scores-container {
+        padding: 0 5px;
+    }
+     .high-scores-title {
+        font-size:2em;
+    }
+    .high-score {
+        font-size:1.1em;
+    }
+    .scores-btn {
+        padding: 2px 4px;
+        font-size:1.1em;
+     }
+}
