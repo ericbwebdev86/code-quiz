@@ -1,0 +1,113 @@
+/* colors 
+dark purple button - 351c75
+light purple background - d9d3e9
+pinkish selected button and view high scores text color - bd60e7
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+ * {
+    font-family: 'Roboto', sans-serif;
+ }
+ header {
+     display: flex;
+     justify-content:space-between;
+ }
+ header a {
+     color: #bd60e7;
+     margin: auto 0;
+     text-decoration: none;
+     padding-left: 20px;
+     font-size: 2em;
+ }
+ header p {
+    font-size: 2em;
+    padding-right: 20px;
+ }
+.start-btn {
+   padding: 18px 40px;
+   color:white;
+   background-color:#351c75;
+   font-size:2.5em;
+   border-radius: 20px;
+   transition-duration: .5s;
+}
+ .start-btn:hover {
+     background-color:#bd60e7;
+ }
+ 
+ .intro-container {
+     text-align:center;
+ }
+.title {
+    font-size:4em;
+}
+.subtitle {
+    font-size:2.5em;
+}
+.intro-sub {
+    padding: 0 17%;
+}
+.quiz-container {
+    padding: 0 20%;
+}
+.answer-btn {
+    display:block;
+    margin: 10px 0;
+    text-align: left;
+    padding: 10px;
+    width:35%;
+    color:white;
+    background-color:#351c75;
+    font-size:2.2em;
+    border-radius: 12px;
+    transition-duration: .5s;
+}
+.answer-btn:hover {
+    background-color:#bd60e7;
+}
+.result-msg {
+    color:darkgray;
+    border-top:3px solid darkgray;
+    font-style:italic;
+    padding-top: 10px;
+}
+.score {
+    margin: 0 20%;
+}
+form{
+    display:flex;
+}
+input {
+   
+    width: 400px;
+    margin: 0 10px;
+}
+.initials-btn {
+    padding: 10px 20px;
+    color:white;
+    background-color:#351c75;
+    font-size:2em;
+    border-radius: 12px;
+    transition-duration: .5s;
+ }
+  .initials-btn:hover {
+      background-color:#bd60e7;
+  }
+  .high-scores {
+      padding: 0 30%;
+  }
+  .scores-ol {
+      background-color:#d9d3e9;
+  }
+  .scores-btn {
+    padding: 10px 20px;
+    color:white;
+    background-color:#351c75;
+    font-size:2em;
+    border-radius: 12px;
+    transition-duration: .5s;
+ }
+  .scores-btn:hover {
+      background-color:#bd60e7;
+  }
+
+  
