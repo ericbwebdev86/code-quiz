@@ -8,37 +8,36 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Code Quiz</title>
     <header>
-        <a href="">View high scores</a>
-        <p>Time: <span id="time">0</span> </p>
+        <a href="high-scores.html">View high scores</a>
+        <p id="time">Time: 0</p>
     </header>
-    <div class="intro-container">
+    <div class="intro-container" id="introContainer">
         <h1 class="title">Coding Quiz Challenge</h1>
         <p class="subtitle intro-sub">
             Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
             answers will penalize your score/time by ten seconds!
         </p>
-        <button class="start-btn" id="startBtn">Start Quiz</button>
+        <button class="start-btn" id="startQuizBtn">Start Quiz</button>
     </div>
-    <!-- <div class="quiz-container" id="quizDiv">
-        <h1 class="question" id="qTitle">Commonly used data types do NOT include:</h1>
-        <button class="answer-btn" id="answerBtn1">1. strings</button>
-        <button class="answer-btn" id="answerBtn2">2. booleans</button>
-        <button class="answer-btn" id="answerBtn3">3. alerts</button>
-        <button class="answer-btn" id="answerBtn4">4. numbers</button>
-        <div class="result">
-            <br>
-            <p class="subtitle result-msg">Correct!</p>
+    <div class="quiz-container" id="quizContainer">
+        <h1 class="question" id="qTitle"></h1>
+        <button class="answer-btn" id="answer1" value="answer1"></button>
+        <button class="answer-btn" id="answer2" value="answer2"></button>
+        <button class="answer-btn" id="answer3" value="answer3"></button>
+        <button class="answer-btn" id="answer4" value="answer4"></button>
+        <div class="result" id="resultDiv">
+            <p class="result-msg" id="resultP"></p>
         </div>
-    </div> -->
-    <!-- <div class="score">
-        <h1 class="score-title">All Done!</h1>
-        <p class="score-sub">Your final score is <span>#</span>.</p>
+    </div>
+    <div class="end-container" id="endContainer">
+        <h1 class="end-title">All Done!</h1>
+        <p class="end-sub">Your final score is <span id="fScore"></span>.</p>
         <form action="">
             <label for="initials" class="score-sub">Enter initials: </label>
-            <input type="text" name="initials">
+            <input type="text" name="initials" id="scoreInitials">
             <button class="initials-btn" id="initialsBtn">Submit</button>
         </form>
-    </div> -->
+    </div>
 
 </head>
 
