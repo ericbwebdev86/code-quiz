@@ -21,18 +21,18 @@ let answer = document.querySelectorAll(".answer-btn");
 let answerValue = answer.value;
 let clear = document.querySelector("#clear");
 let highScores = document.getElementById("highScores");
-
+let endScore = 0;
 
 
 // questions array
 let quizQuestions = [
     {
-        q: 'How long did it take Eric to code this',
-        answer1: '1. not long',
-        answer2: '2. a little bit',
-        answer3: '3. a good while',
-        answer4: '4. who cares, lets start the quiz!',
-        cAnswer: 'answer4'
+        q: 'placeholder',
+        answer1: 'placeholder',
+        answer2: 'placeholder',
+        answer3: 'placeholder',
+        answer4: 'placeholder',
+        cAnswer: 'placeholder'
     },
     {
         q: 'Commonly used data types do NOT include:',
@@ -198,8 +198,8 @@ function endQuiz() {
     quizContainer.style.display = 'none';
     endContainer.style.display = 'block';
     resultDiv.style.display = 'none';
-    finalScore.textContent = countDown + 10;
-    finalScore.value = countDown + 10;
+    finalScore.textContent = countDown;
+    endScore = countDown;
 
 };
 
@@ -209,7 +209,13 @@ let scoreInitials = document.getElementById("scoreInitials");
 //initials and score storage
 initialsBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    localS.setItem("scoreInitials", JSON.stringify(scoreInitials.value));
-    localS.setItem("finalScore", JSON.stringify(finalScore.value));
-
+    let initials = scoreInitials.value.trim();
+    let highScore = JSON.parse(window.localStorage.getItem("highScore")) || [];
+    let playerScore = {
+        initials: initials,
+        score: endScore
+    };
+    highScore.push(playerScore);
+    window.localStorage.setItem("highScore", JSON.stringify(highScore));
+    location.replace("high-scores.html")
 });

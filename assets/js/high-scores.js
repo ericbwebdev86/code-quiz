@@ -1,27 +1,28 @@
-let inits = localStorage.getItem("scoreInitials");
-let scores = localStorage.getItem("finalScore");
+let highScore = JSON.parse(localStorage.getItem("highScore"));
 let scoresOl = document.getElementById("scoresOl");
 
-let player = {
-    playerInits: "",
-    playerScore: 0
-};
-player.playerInits = inits;
-player.playerScore = scores;
 
-let renderLi = document.createElement("li");
+
 function postScores() {
-    for (i = 0; i < localStorage.length; i++)
+
+    highScore.sort(function (a, b) {
+        return b.score - a.score
+
+    })
+    for (i = 0; i < highScore.length; i++) {
+        let renderLi = document.createElement("li");
+        renderLi.className = "high-score";
+        renderLi.textContent = highScore[i].initials + " - " + highScore[i].score;
         scoresOl.appendChild(renderLi);
-    renderLi.textContent = player[i].playerInits + " - " + player[i].playerScore;
-    renderLi.className = "high-score";
+
+    }
+
 }
 postScores();
-
 
 let clearBtn = document.getElementById("clear")
 
 clearBtn.addEventListener("click", function () {
     localStorage.clear();
-    renderLi.remove();
+    location.reload();
 });
